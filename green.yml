@@ -1,0 +1,14 @@
+name: G
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  pass:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Always pass
+        run: echo "ok"
