@@ -3,12 +3,14 @@
 </p>
 
 # Iris Agent ⚕
-
+[![Batch C](https://github.com/MetaxisResearch/iris-agent/actions/workflows/deploy-batch-e.yml/badge.svg)](https://github.com/MetaxisResearch/iris-agent/actions/workflows/deploy-batch-e.yml)
 <p align="center">
+
   <a href="https://MetaxisResearch.com/docs/"><img src="https://img.shields.io/badge/Docs-Iris--agent.Metaxis Research.com-FFD700?style=for-the-badge" alt="Documentation"></a>
   <a href="https://discord.gg/Metaxis Research"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
   <a href="https://github.com/Metaxis Research/iris-agent/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License: MIT"></a>
   <a href="https://MetaxisResearch.com"><img src="https://img.shields.io/badge/Built%20by-Metaxis%20Research-blueviolet?style=for-the-badge" alt="Built by Metaxis Research"></a>
+  
 </p>
 
 **The self-improving AI agent built by [Metaxis Research](https://MetaxisResearch.com).** It's the only agent with a built-in learning loop — it creates skills from experience, improves them during use, nudges itself to persist knowledge, searches its own past conversations, and builds a deepening model of who you are across sessions. Run it on a $5 VPS, a GPU cluster, or serverless infrastructure that costs nearly nothing when idle. It's not tied to your laptop — talk to it from Telegram while it works on a cloud VM.
