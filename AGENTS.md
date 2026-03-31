@@ -1,6 +1,18 @@
 # Iris Agent - Development Guide
 
-Instructions for AI coding assistants and developers working on the iris-agent codebase.
+## Quantum Research Context
+
+Iris is currently configured to support post-quantum cryptography research
+for blockchain infrastructure. The following context shapes agent behavior
+across sessions.
+
+### Research Scope
+
+- Monitor post-quantum signature scheme proposals (Dilithium, Falcon, SPHINCS+)
+- Track NIST PQC standardization process and active working groups
+- Summarize new IACR ePrint papers tagged: post-quantum, elliptic-curve, lattice
+- Maintain a running threat model for ECDSA-based blockchain signatures
+- Flag papers that update qubit threshold estimates for Shor's algorithm
 
 ## Development Environment
 
