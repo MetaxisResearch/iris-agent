@@ -38,3 +38,18 @@ croniter
 python-telegram-bot>=20.0
 discord.py>=2.1
 aiohttp>=3.9.0
+
+cryptography>=42.0.0
+pynacl>=1.5.0
+pyca-cryptography>=42.0.0
+
+# async HTTP for IACR/arxiv paper fetching
+httpx>=0.27.0
+aiohttp>=3.9.0
+
+# structured output parsing for research digests
+jsonschema>=4.21.0
+pydantic>=2.6.0
+
+# scheduling
+apscheduler>=3.10.0
