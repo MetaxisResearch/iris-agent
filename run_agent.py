@@ -1280,6 +1280,31 @@ class AIAgent:
         except Exception as e:
             if self.verbose_logging:
                 logging.warning(f"Failed to save session log: {e}")
+
+    from agent.p2mr_session import P2MRSessionManager
+    
+    # generate a unique session id for this run
+    _session_id = str(uuid.uuid4())[:16]
+    
+    # collect active skills for this session
+    _active_skills = [
+        skill.name for skill in agent.skills.active()
+    ] if hasattr(agent, "skills") else ["default", "pqc-monitor", "web-search"]
+    
+    # commit session to a quantum-resistant P2MR address
+    _p2mr_manager = P2MRSessionManager(
+        session_id=_session_id,
+        network="testnet",
+    )
+    _session_commitment = _p2mr_manager.commit_session(active_skills=_active_skills)
+    
+    print(f"[iris] session committed to P2MR address: {_session_commitment.address}")
+    print(f"[iris] merkle root: {_session_commitment.merkle_root[:16]}...")
+    print(f"[iris] skills in commitment: {', '.join(_session_commitment.skills_committed)}")
+    
+    # attach to agent state so other modules can reference it
+    agent.p2mr = _p2mr_manager
+    agent.session_commitment = _session_commitment.to_dict()
     
     def interrupt(self, message: str = None) -> None:
         """
